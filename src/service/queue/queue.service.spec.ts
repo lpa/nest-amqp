@@ -463,6 +463,19 @@ describe('QueueService', () => {
       expect(result).toEqual(obj);
     });
 
+    it('should wrap simple text in JSON object decoded', () => {
+      const result = queueService['decodeMessage']('this a simple text');
+      const expected = { data: 'this a simple text' };
+
+      expect(result).toEqual(expected);
+    });
+
+    it('should decode null', () => {
+      const result = queueService['decodeMessage']('null');
+
+      expect(result).toEqual(null);
+    });
+
     it('should throw error on invalid objects', () => {
       expect(() => {
         queueService['decodeMessage']('{null}');

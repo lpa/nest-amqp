@@ -349,6 +349,17 @@ export class QueueService {
     }
 
     const objectLike: string = message instanceof Buffer ? message.toString() : (message as string);
+
+    // We want to accept AMQP messages made of simple text,
+    // so we wrap text in a JSON object and return it
+    // boolean, null, numbers are already accepted by the last JSON.parse()
+    if (objectLike && typeof objectLike !== 'number'
+        && objectLike !== 'null'
+        && objectLike !== 'true' && objectLike !== 'false'
+        && !objectLike.trim().startsWith('{') && !objectLike.trim().startsWith('[')) {
+      return { data: objectLike };
+    }
+
     return JSON.parse(objectLike);
   }
 
