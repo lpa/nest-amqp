@@ -10,7 +10,7 @@
   "dependencies": {
     "@nestjs/common": "^8.0.6",
     "@nestjs/core": "^8.0.6",
-    "@nestjs/platform-express": "^8.0.6",
+    "@nestjs/platform-express": "^10.4.19",
     "@team-supercharge/nest-amqp": "^3.0.0",
     "class-transformer": "^0.4.0",
     "class-validator": "^0.13.1",
