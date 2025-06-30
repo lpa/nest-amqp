@@ -14,7 +14,7 @@
     "@team-supercharge/nest-amqp": "^3.0.0",
     "class-transformer": "^0.4.0",
     "class-validator": "^0.13.1",
-    "reflect-metadata": "^0.1.13",
+    "reflect-metadata": "^0.2.2",
     "rimraf": "^3.0.2",
     "rxjs": "^7.3.0"
   },
