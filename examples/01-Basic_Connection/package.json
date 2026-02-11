@@ -8,7 +8,7 @@
     "start:prod": "node dist/main"
   },
   "dependencies": {
-    "@nestjs/common": "^8.0.6",
+    "@nestjs/common": "^9.0.0",
     "@nestjs/core": "^8.0.6",
     "@nestjs/platform-express": "^8.0.6",
     "@team-supercharge/nest-amqp": "^3.0.0",
